@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main (){
+    //инициализация
+	int n;
+	vector <int> mass;
+	
+	//ввод
+	cin >> n;
+    for (int i = 0; i < n; i++) {
+        int pop;
+        cin >> pop;
+        mass.push_back(pop);
+    }
+    
+    //обработка
+    int min = mass[0], in_min = 0;
+    for (int i = 1; i < mass.size(); i++) {
+        if (mass[i] < min) {
+            min = mass[i];
+            in_min = i;
+        }
+    }
+    int temp = mass[in_min];
+    mass[in_min] = mass[0];
+    mass[0] = temp;
+    
+    //вывод
+    for (auto now : mass) {
+        cout << now << " ";
+    }
+    
+}
