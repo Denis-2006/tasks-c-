@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main (){
+    //инициализация
+	int n;
+	vector <int> mass;
+	
+	//ввод
+	cin >> n;
+    for (int i = 0; i < n; i++) {
+        int pop;
+        cin >> pop;
+        mass.push_back(pop);
+    }
+    
+    //обработка
+    for (int i = 1; i < mass.size(); i++) {
+        if (mass[i] > mass[i -1]) {
+            cout << mass[i] << " ";
+        }
+    }
+}
