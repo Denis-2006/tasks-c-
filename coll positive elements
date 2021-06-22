@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main (){
+    //инициализация
+	int n;
+	vector <int> mass;
+	
+	//ввод
+	cin >> n;
+    for (int i = 0; i < n; i++) {
+        int pop;
+        cin >> pop;
+        mass.push_back(pop);
+    }
+    
+    //обработка
+    int ress = 0;
+    for  (auto now : mass) {
+        if (now > 0) {
+            ress++;
+        }
+    }
+    
+    //вывод
+    cout << ress;
+    
+    
+}
